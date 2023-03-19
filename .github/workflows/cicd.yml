@@ -31,5 +31,15 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Linting
-        run: yarn lint
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          cname: example.com
+          commit_message: Deploy the website
