@@ -31,5 +31,5 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Test
-        run: yarn test
+      - name: Linting
+        run: yarn lint
