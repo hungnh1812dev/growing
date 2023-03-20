@@ -10,7 +10,7 @@ on:
     branches: ["develop", "main"]
 
 jobs:
-  build:
+  build_a_deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,11 +30,6 @@ jobs:
 
       - name: Build
         run: yarn build
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
