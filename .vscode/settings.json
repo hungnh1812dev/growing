@@ -1,0 +1,63 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.hasSemicolon": true,
+    "importSorter.importStringConfiguration.quoteMark": "double",
+    "importSorter.importStringConfiguration.tabSize": 4,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 180,
+    "importSorter.importStringConfiguration.spacingPerImportExpression.beforeEndingBracket": 1,
+    "importSorter.importStringConfiguration.spacingPerImportExpression.afterStartingBracket": 1,
+    "importSorter.sortConfiguration.customOrderingRules.rules": [
+        {
+            // global style should have most top
+            "regex": "@styles/.*.(sc|sa|c)?ss$",
+            "orderLevel": 10
+        },
+        {
+            // other import libs
+            "regex": "^(@libs)",
+            "orderLevel": 30
+        },
+        {
+            // other import components
+            "regex": "^(@components)",
+            "orderLevel": 50
+        },
+        {
+            "regex": "^[@]",
+            "orderLevel": 70
+        },
+        {
+            // other import components
+            "regex": "^(@images)",
+            "orderLevel": 90
+        },
+        {
+            "regex": "^\\.",
+            "orderLevel": 110
+        },
+        {
+            "regex": "^\\..*.(sc|sa|c)?ss$",
+            "orderLevel": 130
+        },
+        {
+            "type": "importMember",
+            "regex": "^$",
+            "orderLevel": 500
+        }
+    ],
+
+    "blueprint.templatesPath": ["./.vscode/blueprint-templates"],
+
+    "terminal.integrated.profiles.windows": {
+        "JavaScript Debug Terminal": null,
+        "Bash": {
+            "path": "G:\\Devtools\\Git\\bin\\bash.exe",
+            "icon": "terminal-bash"
+        }
+    },
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Bash"
+}
